@@ -1,5 +1,5 @@
 body {
-	padding-top: 100px;
+	padding-top: 70px;
 	position: relative;
 	background-color: #2e3842;
 	color: white;
@@ -16,6 +16,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    margin-bottom: 0px;
 }
 
 #phone-detected {
@@ -25,7 +26,7 @@ body {
 .touch-container {
 	position: absolute;
 	right: 20px;
-	top: 20px;
+	top: 70px;
 	border: 1px solid black;
 	padding: 10px;
 	text-align: left;
@@ -54,6 +55,7 @@ body {
 	position: relative;
 	background-color: black;
 	margin: auto;
+	margin-top: 10px;
 	width: 550px;
 	height: 600px;
 }
@@ -137,22 +139,46 @@ body {
 
 .score-container {
 	position: absolute;
-	top: 20px;
+	top: 70px;
 	left: 20px;
 	font-size: 20px;
 	display: none;
 }
 
-@media (max-width: 1024px) {
-	#game-screen {
-		display: none;
-	}
 
+#best-score table {
+	margin: auto;
+	margin-top : 20px;
+}
+
+#best-score table th {
+	text-align: center;
+}
+
+#enter-name {
+	padding-top: 50px;
+}
+
+#player-name {
+	text-align: center;
+	color: black;
+}
+
+#name-entered {
+	display: none;
+}
+
+#score-saved {
+	padding-top: 50px;
+}
+
+@media (max-width: 1024px) {
+	
 	#phone-detected {
 		display: block;
 	}
 
-	.touch-container {
+	.hide-on-phone {
 		display: none;
 	}
 }

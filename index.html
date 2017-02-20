@@ -7,8 +7,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-theme.min.css" media="screen" />
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="assets/fonts/silkscreen_normal_macroman/stylesheet.css" type="text/css" charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="assets/css/game.css" media="screen" />
 
@@ -38,50 +38,85 @@
 		<div class="container">
 			<div id="game-container" class="panel panel-default">
 				<div class="panel-body">
-					<div class="score-container">Score : <span id="score">0</span></div>
-					<div class="touch-container">
-						<h2>COMMAND</h2>
-						<br/>
-						MOVE<span class="touch"> <- </span><span class="touch"> -> </span>
-						<br/><br/>
-						SHOT<span id="touch-space" class="touch"> SPACE </span>
-					</div>
+					<ul class="nav nav-tabs hide-on-phone" role="tablist">
+						<li class="active"><a href="#game" data-toggle="tab">Game</a></li>
+						<li><a href="#best-score" data-toggle="tab">Best Score</a></li>
+					</ul>
 					<div id="phone-detected">Le contenu de cette page est seulement disponible sur ordinateur pour l'instant</div>
-					<div id="game-screen">
-						<div id="new-game-screen" class="screen">
-							<img alt="SPACE INVADERS" src="assets/img/title.png">
-							<br/>
-							<button class="game-button new-game-button">Start Game</button>
-							<br/>
-							<button class="game-button option-button">Option</button>
-						</div>
-						<div id="perdu-screen" class="screen">
-							<img alt="GAME OVER" src="assets/img/game-over.png">
-							<br/>
-							SCORE : <span id="score-at-end">0</span>
-							<br/>
-							<button class="game-button new-game-button">New Game</button>
-							<br/>
-							<button class="game-button back-menu-button">Back to menu</button>
-						</div>
-						<div id="option-screen" class="screen">
-							<h2>Option</h2>
-							<br/>
-							<div class="option-label">
-								Difficulty
-								<span id="right-arrow" class="arrow"> > </span>
-								<span id="difficulty-label" class="choice-label" >MEDIUM</span>
-								<span id="left-arrow" class="arrow"> < </span>
+					<div class="tab-content hide-on-phone">
+						<div id="game" class="tab-pane active">
+							<div class="score-container">Score : <span id="score">0</span></div>
+							<div class="touch-container">
+								<h2>COMMAND</h2>
+								<br/>
+								MOVE<span class="touch"> <- </span><span class="touch"> -> </span>
+								<br/><br/>
+								SHOT<span id="touch-space" class="touch"> SPACE </span>
 							</div>
-							
-							<button class="game-button back-menu-button">Back to menu</button>
+							<div id="game-screen">
+								<div id="new-game-screen" class="screen">
+									<img alt="SPACE INVADERS" src="assets/img/title.png">
+									<br/>
+									<button class="game-button new-game-button">Start Game</button>
+									<br/>
+									<button class="game-button option-button">Option</button>
+								</div>
+								<div id="perdu-screen" class="screen">
+									<img alt="GAME OVER" src="assets/img/game-over.png">
+									<br/>
+									SCORE : <span id="score-at-end">0</span>
+									<br/>
+									<div id="enter-name">
+										<p>Enter your name</p>
+										<input type="text" id="player-name" />
+										<button id="player-name-button" class="game-button">Validate</button>
+									</div>
+									<div id="score-saved">
+										<p>Score saved !!</p>
+									</div>
+									<div id="name-entered">
+										<button class="game-button new-game-button">New Game</button>
+										<br/>
+										<button class="game-button back-menu-button">Back to menu</button>
+									</div>
+								</div>
+								<div id="option-screen" class="screen">
+									<h2>Option</h2>
+									<br/>
+									<div class="option-label">
+										Difficulty
+										<span id="right-arrow" class="arrow"> > </span>
+										<span id="difficulty-label" class="choice-label" >MEDIUM</span>
+										<span id="left-arrow" class="arrow"> < </span>
+									</div>
+									
+									<button class="game-button back-menu-button">Back to menu</button>
+								</div>
+							</div>
+						</div>
+						<div id="best-score" class="tab-pane">
+							<br/>
+							<p>Best score table for difficulty hard</p>
+							<table id="score-table" class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<th></th>
+										<th>Nom</th>
+										<th>Score</th>
+										<th>Date</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="assets/js/game.js"></script>
 	</body>
 </html>
