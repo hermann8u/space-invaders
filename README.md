@@ -1,5 +1,7 @@
 # Space_invaders Project version Alpha
 
+If you have any idea you can update this file
+
 To Do sugestion :
   - recursive call for function desc() with setTimeOut instead of setInterval in order to change interval
   - add different monsters
