@@ -7,6 +7,6 @@ To Do suggestion :
   - add different monsters
   - add bonus weapon for short delay
   - add music on option menu
-Done - add webservice with best score table (only for difficulty hard on firstly)
+  - Done: add webservice with best score table (only for difficulty hard on firstly)
   - ..
   
