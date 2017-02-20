@@ -2,7 +2,7 @@
 
 If you have any idea you can update this file
 
-To Do sugestion :
+To Do suggestion :
   - recursive call for function desc() with setTimeOut instead of setInterval in order to change interval
   - add different monsters
   - add bonus weapon for short delay
