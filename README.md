@@ -8,5 +8,7 @@ To Do suggestion :
   - add bonus weapon for short delay
   - add music on option menu http://www.classicgaming.cc/classics/space-invaders/sounds
   - Done: add webservice with best score table (only for difficulty hard on firstly)
+  - Un compteur à l'initialisation
+  - Convertir le code en canvas https://www.w3schools.com/html/html5_canvas.asp
   - ..
   
