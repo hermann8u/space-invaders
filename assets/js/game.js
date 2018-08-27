@@ -267,48 +267,6 @@ function lostGame() {
 	$('.score-container').hide();
 }
 
-function saveScore() {
-
-	$.ajax({
-		url: 'http://www.cyril-minette.net/iut/javascript/webservices/scores/add.php?id_app=spaceinvade&nom='+ $('#player-name').val() +'&score=' + score,
-		dataType: 'json',
-		success: function(json) {
-			if (json == 'ok') {
-				$('#enter-name').hide();
-				$('#score-saved').show();
-				$('#score-saved p').animate({'font-size' : '40px'}, 600);
-				setTimeout(function(){ $('#score-saved').hide(); }, 600);
-				setTimeout(function(){ $('#name-entered').show(); }, 1200);
-				updateScoreTable();
-			}
-		}
-	});
-}
-
-function updateScoreTable() {
-	$.ajax({
-		url: 'http://www.cyril-minette.net/iut/javascript/webservices/scores/list.php?id_app=spaceinvade',
-		dataType: 'json',
-		success: function(json) {
-			$('#score-table tbody').html('');
-			
-			var iMax;
-			if (json.length < 10){
-				iMax = json.length + 1;
-			}
-			else {
-				iMax = 11;
-			}
-
-			for (var i = 1; i < iMax; i++) {
-				var displayableDate = new Date(json[i-1][3]);
-				displayableDate = displayableDate.getDate() + " / " + (parseInt(displayableDate.getMonth()) + 1) + " / " + displayableDate.getFullYear();
-				$('#score-table tbody').append('<tr><td>'+ i +'</td><td>'+ json[i-1][1] +'</td><td>' + json[i-1][2] + '</td><td>'+ displayableDate +'</td></tr>')
-			}
-		}
-	});
-}
-
 function changeDifficulty(value) {
 	if (value == 'left-arrow') {
 		if (difficulty.const != difficulties.easy.const) {

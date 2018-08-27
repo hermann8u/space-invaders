@@ -1,14 +1,15 @@
-# Space_invaders Project version Alpha
+# Space-invaders Project version Alpha
 
-If you have any idea you can update this file
+I made this when I was still a student (in April 2016).
+
+This is a simple HTML and jQuery game with a HTML grid system. I didn't even know the existence of canvas at this time (so don't be too rude!).
+
+Live version: http://game.florianhermann.fr
 
 To Do suggestion :
   - recursive call for function desc() with setTimeOut instead of setInterval in order to change interval
   - add different monsters
   - add bonus weapon for short delay
   - add music on option menu http://www.classicgaming.cc/classics/space-invaders/sounds
-  - Done: add webservice with best score table (only for difficulty hard on firstly)
-  - Un compteur à l'initialisation
-  - Convertir le code en canvas https://www.w3schools.com/html/html5_canvas.asp
-  - ..
-  
+  - Convert the existent code to canvas
+  - ...  

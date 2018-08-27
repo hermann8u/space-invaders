@@ -1,3 +1,25 @@
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
 body {
 	padding-top: 70px;
 	position: relative;
@@ -65,7 +87,7 @@ body {
 	bottom:0;
 	left: 250px;
 	width: 50px;
-	height: 49px;
+	height: 48px;
 	background-image: url("../img/ship.png");
 }
 
@@ -137,23 +159,6 @@ body {
 	border-top: 2px solid #1ef41e;
 }
 
-.score-container {
-	position: absolute;
-	top: 70px;
-	left: 20px;
-	font-size: 20px;
-	display: none;
-}
-
-
-#best-score table {
-	margin: auto;
-	margin-top : 20px;
-}
-
-#best-score table th {
-	text-align: center;
-}
 
 #enter-name {
 	padding-top: 50px;
@@ -171,6 +176,24 @@ body {
 #score-saved {
 	padding-top: 50px;
 }
+
+.score-container {
+	position: absolute;
+	top: 70px;
+	left: 20px;
+	font-size: 20px;
+	display: none;
+}
+
+#best-score table {
+	margin: auto;
+	margin-top : 20px;
+}
+
+#best-score table th {
+	text-align: center;
+}
+
 
 @media (max-width: 1024px) {
 	
